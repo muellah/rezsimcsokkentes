@@ -211,7 +211,7 @@
       justify-content: center;
     }
     .hero-buttons .btn {
-      min-width: 280px;
+      min-width: 240px;
       justify-content: center;
     }
     .btn {
@@ -761,7 +761,7 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#" class="nav-logo">REZSIM<span>CSÖKKENTÉS.HU</span></a>
+    <a href="#" class="nav-logo">REZSIM<span>CSÖKKENTÉS</span></a>
     <a href="https://www.facebook.com/events/946130271694594" target="_blank" class="nav-cta">Gyere el! →</a>
   </nav>
 
@@ -815,17 +815,17 @@
         Facebook esemény
       </a>
       <a href="https://open.spotify.com/playlist/6cyscxVbQYarXCoYheCD4N?si=jSgo0wr7Qyq8p1pJYMr0Ag&pi=EB6lkoBqQpWru" target="_blank" class="btn btn-outline">
-        ♫ Rezsimcsökkentő Playlist
+        ♫ Hallgasd a zenéket
       </a>
     </div>
 
-    <div class="hero-scroll-hint">↓ Tekerd! ↓</div>
+    <div class="hero-scroll-hint">↓ Tekerj! ↓</div>
   </section>
 
   <!-- ===== MANIFESTO ===== -->
   <section class="manifesto" id="mirol">
-    <h2 class="section-title">EZ MOST TÖBBRŐL SZÓL</h2>
-    <div class="section-subtitle">... és nem csak egy tök jó koncert</div>
+    <h2 class="section-title">MIRŐL SZÓL?</h2>
+    <div class="section-subtitle">nem csak egy koncert</div>
 
     <div class="manifesto-text">
       <p>Amit ma a kultúra kimond, holnap a politika nem hallgathatja el. A történelem arra tanít: <strong>a dal erősebb fegyver, mint bármilyen hatalom.</strong></p>
@@ -834,9 +834,9 @@
 
       <p>30+ előadó lép színpadra. Nincs gázsi, mindenki önként vállalja. Ez nem pártrendezvény, hanem kulturális állásfoglalás.</p>
 
-      <span class="manifesto-highlight" style="text-align:center">„Véget ért a következménytelenség kora."</span>
+      <span class="manifesto-highlight">„Véget ért a következménytelenség kora."</span>
 
-      <p>A cél egyszerű: szavazásra buzdítani mindenkit, aki szerint 16 év elég volt. Pénteken koncert, vasárnap szavazás. <strong>Legyél ott mindkettőn!</strong></p>
+      <p>A cél egyszerű: szavazásra buzdítani mindenkit, aki szerint 16 év elég volt. Pénteken koncert, vasárnap szavazás. <strong>Légy ott mindkettőn.</strong></p>
 
       <div class="manifesto-note">
         ❤️ 🤍 💚 A szervezők kérik: <strong>pártjelvényeket, zászlókat ne hozzatok</strong> — ez egy pártsemleges, civil esemény.
@@ -848,7 +848,7 @@
 
   <!-- ===== LINEUP ===== -->
   <section class="lineup" id="fellepok">
-    <h2 class="section-title">ŐK OTT LESZNEK</h2>
+    <h2 class="section-title">FELLÉPŐK</h2>
     <div class="section-subtitle">...és a lista még bővül</div>
 
     <ul class="lineup-list">
@@ -881,15 +881,15 @@
 
   <!-- ===== MUSIC DISCOVERY ===== -->
   <section class="music" id="zenek">
-    <h2 class="section-title">PLAYLIST A REZSIMCSÖKKENTÉSÉRT</h2>
-    <div class="section-subtitle">... a legjobb rendszerbontó zenékkel</div>
+    <h2 class="section-title">RENDSZERKRITIKUS ZENÉK</h2>
+    <div class="section-subtitle">fedezd fel az ellenállás hangjait</div>
 
     <p class="music-description">
-      A fellépők legjobb rendszerkritikái és hasonló remek muzsikák. Tedd el a listát és pörgesd a szavazásig. Garantált rezsimcsökkentő hatás.
+      Playlist az előadók legjobb rendszerkritikus dalaiból. Ismerd meg a zenéket a koncert előtt — és fedezz fel újakat, amik rezonálnak.
     </p>
 
     <div class="spotify-embed">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6cyscxVbQYarXCoYheCD4N?utm_source=generator" width="100%" height="528" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6cyscxVbQYarXCoYheCD4N?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
     <div class="music-alt">
@@ -907,8 +907,8 @@
 
     <!-- TRACK SUGGESTION FORM -->
     <div class="suggest-section" id="javaslat">
-      <h3>PAKOLJ TE IS A PLAYLISTRE ✗</h3>
-      <span class="sub">Nem találod a listán valami témába illő kedvencedet? Dobd át!</span>
+      <h3>JAVASOLJ DALT! ✗</h3>
+      <span class="sub">Szerinted melyik dal hiányzik még a playlistből?</span>
 
       <div id="suggest-form-wrap">
         <form id="suggest-form" name="dal-javaslat" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -916,22 +916,22 @@
           <div class="form-grid">
             <div class="form-field">
               <label for="artist">Előadó neve *</label>
-              <input type="text" id="artist" name="artist" required placeholder="pl. Pityingner Lackó">
+              <input type="text" id="artist" name="artist" required placeholder="pl. Tankcsapda">
             </div>
             <div class="form-field">
               <label for="track">Dal címe *</label>
-              <input type="text" id="track" name="track" required placeholder="Az Orbán-ház fantomja">
+              <input type="text" id="track" name="track" required placeholder="pl. Nem kell semmi">
             </div>
             <div class="form-field">
               <label for="link">Link (opcionális)</label>
               <input type="url" id="link" name="link" placeholder="Spotify / YouTube link">
             </div>
             <div class="form-field">
-              <label for="why">Miért ez a kedvenced?</label>
+              <label for="why">Miért illik ide?</label>
               <input type="text" id="why" name="why" placeholder="Röviden...">
             </div>
           </div>
-          <button type="submit" class="form-submit">Beküldöm →</button>
+          <button type="submit" class="form-submit">Javaslat küldése →</button>
         </form>
       </div>
       <div class="form-success" id="form-success">
@@ -947,7 +947,7 @@
   <!-- ===== DONATE ===== -->
   <section class="donate" id="tamogatas">
     <h2 class="section-title">TÁMOGASD A KONCERTET!</h2>
-    <div class="section-subtitle">... a teknolódzsia nem olcsó, minden forint segít, hogy ez nagyot szóljon!</div>
+    <div class="section-subtitle">minden forint a színpadért, a hangért, a fényért</div>
 
     <div class="donate-card">
       <div class="donate-amount" id="donate-amount">33 497 211 Ft</div>
@@ -979,11 +979,11 @@
     </h2>
     <div class="vote-date">2026. ÁPRILIS 12. VASÁRNAP</div>
     <p class="vote-text">
-      🪩 Péntek: együtt a Hősök terén<br>
-      ⓧ Vasárnap: csak te és a szavazófülke
+      🪩 Pénteken a Hősök terén.<br>
+      ⓧ Vasárnap a szavazófülkében.
     </p>
     <p class="vote-text" style="margin-top:8px; color:#6B6B6B;">
-      Addig is, hogy mindennel képben legyél:
+      Addig is meg legyél képben:
     </p>
     <a href="https://helsinki.hu/valasztasi-kisokos-2026/" target="_blank" class="vote-cta">
       ✗ Szavazási kisokos
