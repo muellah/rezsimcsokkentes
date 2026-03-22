@@ -3,18 +3,15 @@ export default async (req, context) => {
     const res = await fetch("https://www.donably.com/polgari-ellenallas");
     const html = await res.text();
 
-    // Parse donation amount - look for the large number before "HUF"
-    const amountMatch = html.match(/([\d\s]{5,})\s*(?:<[^>]*>\s*)*HUF/i)
-      || html.match(/([\d]{1,3}(?:[\s\xa0]\d{3}){2,})/);
-
-    // Parse supporter count
-    const supporterMatch = html.match(/([\d\s]+)\s*(?:<[^>]*>\s*)*supporter/i);
+    // Donably uses: <div class="fanpage-donators h3">35 448 600 <span>HUF</span></div>
+    const amountMatch = html.match(/fanpage-donators[^>]*>([\d\s]+)<\s*span[^>]*>\s*HUF/i);
+    const supporterMatch = html.match(/fanpage-donators[^>]*>([\d\s]+)<\s*span[^>]*>\s*supporter/i);
 
     let amount = null;
     let supporters = null;
 
     if (amountMatch) {
-      amount = amountMatch[1].replace(/\s+/g, ' ').trim();
+      amount = amountMatch[1].trim();
     }
     if (supporterMatch) {
       supporters = supporterMatch[1].trim();
