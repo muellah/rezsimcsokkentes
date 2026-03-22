@@ -950,9 +950,9 @@
     <div class="section-subtitle">minden forint a színpadért, a hangért, a fényért</div>
 
     <div class="donate-card">
-      <div class="donate-amount">33 497 211 Ft</div>
+      <div class="donate-amount" id="donate-amount">33 497 211 Ft</div>
       <div class="donate-goal">összegyűlt eddig / cél: 45 000 000 Ft</div>
-      <div class="donate-bar"><div class="donate-bar-fill" style="width:74%"></div></div>
+      <div class="donate-bar"><div class="donate-bar-fill" id="donate-bar-fill" style="width:74%"></div></div>
 
       <p class="donate-desc">
         A koncert ingyenes, de a színpad, hangosítás és kivetítés nem az. Minden fellépő ingyen vállalja — te is segíthetsz, hogy a technika meglegyen.
@@ -1036,6 +1036,25 @@
     }
     updateCountdown();
     setInterval(updateCountdown, 60000);
+
+    // DONATION AMOUNT - live from Donably via /api/donation
+    fetch("/api/donation")
+      .then(r => r.json())
+      .then(data => {
+        if (data.amount) {
+          const el = document.getElementById("donate-amount");
+          if (el) el.textContent = data.amount + " Ft";
+          // Update progress bar
+          const num = parseInt(data.amount.replace(/\s/g, ""), 10);
+          const goal = parseInt(data.goal, 10);
+          if (num && goal) {
+            const pct = Math.min(Math.round((num / goal) * 100), 100);
+            const bar = document.getElementById("donate-bar-fill");
+            if (bar) bar.style.width = pct + "%";
+          }
+        }
+      })
+      .catch(() => { /* keep static fallback */ });
 
     // FORM HANDLING - Netlify Forms via fetch
     const form = document.getElementById('suggest-form');
