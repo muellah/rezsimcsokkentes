@@ -98,6 +98,8 @@
       --gray: #6B6B6B;
       --gray-light: #E8E8E4;
       --pe-dark: #111111;
+      --radius-sm: 8px;
+      --radius-lg: 12px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -163,7 +165,7 @@
       color: white;
       text-decoration: none;
       padding: 8px 20px;
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
       font-weight: 600;
       font-size: 14px;
       letter-spacing: 0.5px;
@@ -187,7 +189,7 @@
     }
     .hero-overtitle {
       font-family: 'Caveat', cursive;
-      font-size: 22px;
+      font-size: 26px;
       color: var(--gray);
       margin-bottom: 8px;
       transform: rotate(-2deg);
@@ -272,7 +274,7 @@
       align-items: center;
       gap: 8px;
       padding: 14px 28px;
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
@@ -301,7 +303,7 @@
       position: absolute;
       bottom: 8px;
       font-family: 'Caveat', cursive;
-      font-size: 16px;
+      font-size: 20px;
       color: var(--gray);
       animation: bounce 2s infinite;
     }
@@ -325,7 +327,7 @@
     }
     .section-subtitle {
       font-family: 'Caveat', cursive;
-      font-size: 20px;
+      font-size: 24px;
       color: var(--gray);
       margin-bottom: 32px;
       transform: rotate(-1deg);
@@ -360,7 +362,7 @@
       padding: 12px 20px;
       font-size: 15px;
       color: var(--gray);
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
     }
 
     /* ===== LINEUP ===== */
@@ -390,7 +392,7 @@
     .lineup-note {
       text-align: center;
       font-family: 'Caveat', cursive;
-      font-size: 20px;
+      font-size: 24px;
       color: var(--gray);
       padding: 16px 0;
     }
@@ -472,7 +474,7 @@
       font-weight: 700;
       font-size: 18px;
       letter-spacing: 1px;
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
       transition: all 0.2s;
     }
     .pe-cta:hover {
@@ -490,14 +492,14 @@
       margin-bottom: 32px;
     }
     .spotify-embed {
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
       margin-bottom: 24px;
     }
     .spotify-embed iframe {
       width: 100%;
       border: none;
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
     }
     .music-alt {
       justify-content: center;
@@ -515,7 +517,7 @@
       padding: 14px 28px;
       background: transparent;
       border: 2px solid var(--black);
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
       text-decoration: none;
       color: var(--black);
       font-size: 16px;
@@ -532,7 +534,7 @@
     .suggest-section {
       background: white;
       border: 2px solid var(--gray-light);
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
       padding: 32px;
     }
     .suggest-section h3 {
@@ -544,7 +546,7 @@
     .suggest-section .sub {
       font-family: 'Caveat', cursive;
       color: var(--gray);
-      font-size: 17px;
+      font-size: 22px;
       margin-bottom: 24px;
       display: block;
     }
@@ -570,7 +572,7 @@
     .form-field textarea {
       padding: 12px 16px;
       border: 1px solid var(--gray-light);
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
       transition: border-color 0.2s;
@@ -591,7 +593,7 @@
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
       font-weight: 600;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -622,7 +624,7 @@
     .donate-card {
       background: linear-gradient(135deg, #FFF8F0 0%, #FFF3E0 100%);
       border: 2px solid var(--orange);
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
       padding: 40px 32px;
       text-align: center;
     }
@@ -644,7 +646,7 @@
     .donate-bar {
       height: 8px;
       background: rgba(232,130,12,0.15);
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
       margin: 16px auto 24px;
       max-width: 400px;
       overflow: hidden;
@@ -652,7 +654,7 @@
     .donate-bar-fill {
       height: 100%;
       background: var(--orange);
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
       width: 70%;
       transition: width 1s ease-out;
     }
@@ -681,7 +683,7 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       transition: all 0.2s;
     }
     .donate-btn:hover {
@@ -696,7 +698,7 @@
     .donate-bank code {
       background: rgba(0,0,0,0.05);
       padding: 2px 8px;
-      border-radius: 3px;
+      border-radius: var(--radius-sm);
       font-size: 14px;
     }
 
@@ -720,7 +722,7 @@
     }
     .vote-overtitle {
       font-family: 'Caveat', cursive;
-      font-size: 22px;
+      font-size: 26px;
       color: var(--gray);
       margin-bottom: 8px;
     }
@@ -756,7 +758,7 @@
       padding: 18px 40px;
       font-size: 18px;
       font-weight: 700;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       letter-spacing: 0.5px;
       transition: all 0.2s;
     }
@@ -788,7 +790,7 @@
     }
     .footer-domain {
       font-family: 'Caveat', cursive;
-      font-size: 18px;
+      font-size: 22px;
       color: #666;
       margin-top: 16px;
     }
@@ -950,7 +952,7 @@
     </p>
 
     <div class="spotify-embed">
-      <iframe title="Rezsimcsökkentő Spotify playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6cyscxVbQYarXCoYheCD4N?utm_source=generator" width="100%" height="528" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe title="Rezsimcsökkentő Spotify playlist" style="border-radius:var(--radius-lg)" src="https://open.spotify.com/embed/playlist/6cyscxVbQYarXCoYheCD4N?utm_source=generator" width="100%" height="528" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 
     <div class="music-alt">
