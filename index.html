@@ -456,20 +456,23 @@
     .music-alt-link {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      padding: 10px 20px;
-      background: white;
-      border: 1px solid var(--gray-light);
-      border-radius: 6px;
+      min-width: 280px;
+      padding: 14px 28px;
+      background: transparent;
+      border: 2px solid var(--black);
+      border-radius: 4px;
       text-decoration: none;
       color: var(--black);
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 600;
       transition: all 0.2s;
     }
     .music-alt-link:hover {
-      border-color: var(--black);
-      transform: translateY(-1px);
+      background: var(--black);
+      color: var(--white);
+      transform: translateY(-2px);
     }
 
     /* ===== SUGGEST FORM ===== */
